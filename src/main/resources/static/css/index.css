@@ -93,7 +93,7 @@
     padding: 205px 0 0; 
     position: relative;
 }
-.main-visual .slide-control{
+/* .main-visual .slide-control{
 	position: absolute;
 	right: 0px;
 	bottom:100px;
@@ -102,6 +102,16 @@
 }
 .main-visual .slide-control .btns{
 	margin-right: 30px;
+} */
+.main-visual .slide-control .current .loader{
+	display: inline-block;
+    width: 60px;
+    height: 60px;
+    transform: rotate(-90deg);
+    stroke: rgba(0,0,0,0.2);
+    fill: none;
+    overflow: visible;
+    vertical-align: middle;
 }
 /*///////////////////////////////////// */
 /*/////////////introduction//////////// */
