@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url("reset.css");
+@import url("header.css");
+@import url("footer.css");
+
+/* 화면사이즈 css */
+.view-width{
+	max-width: 1600px;
+	margin: 0 auto; 
+}
+/* 가로정렬 css */
+.row-align{
+	display: flex;
+}
+/* 가로정렬(오른쪽부터) css */
+.row-end-align{
+	display: flex;
+	justify-content: flex-end;
+}
+/* 세로정렬 css */
+.column-align{
+	display: flex;
+	flex-direction: column;
+}
+/* 세로가운데정렬 css */
+.column-center-align{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+/* 양쪽으로 나누어서 가로정렬 */ 
+.space-between{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+

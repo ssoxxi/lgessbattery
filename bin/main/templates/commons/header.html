@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+	<header th:fragment="header">
+		<h1>상단영역</h1>
+		<div class="view-width space-between">
+			<section class="logo">
+				<h1>로고</h1>
+				<a href="/" title="홈으로 이동">
+					<img alt="logo 이미지" src="/images/logo.svg">
+				</a>
+			</section>
+			<nav id="top-menu">
+				<h1>메인메뉴</h1>
+				<div class="wrap">
+					<ul class="row-align space-between main">
+						<li><a href="#">Why LG Chem</a></li>
+						<li><a href="#">Home Battery</a></li>
+						<li><a href="#">Home Battery Partner</a></li>
+						<li><a href="#">Grid/C&amp;I/UPS Battery</a></li>
+						<li><a href="#">Q&amp;A</a></li>
+					</ul>
+					<div class="drop-menu">
+						<div>
+							<ul id="drop-menu" class="view-width row-align">
+								<li class="sub1">
+									<ul>
+										<li><a href="#">About Home Battery</a></li>
+										<li><a href="#">Product Info</a></li>
+										<li><a href="#">Where to Buy</a></li>
+										<li><a href="#">RESU Story</a></li>
+										<li><a href="#">News &&amp; Events</a></li>
+									</ul>
+								</li>
+								<li class="sub2">
+									<ul>
+										<li><a href="#">About Partner Program</a></li>
+										<li><a href="#">News & Events</a></li>
+										<li><a href="#">Library</a></li>
+										<li><a href="#">Training</a></li>
+										<li><a href="#">Certified Installer Test</a></li>
+										<li><a href="#">Authorised Distributors</a></li>
+									</ul>
+								</li>
+								<li class="sub3">
+									<ul>
+										<li><a href="#">Introduction</a></li>
+										<li><a href="#">Product Info</a></li>
+										<li><a href="#">Global Reference</a></li>
+										<li><a href="#">News &amp; Events</a></li>
+									</ul>
+								</li>
+								<li class="sub4">
+									<ul>
+										<li><a href="#">FAQ</a></li>
+										<li><a href="#">Q&amp;A</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+			<section id="util-wrap" class="row-align space-between">
+				<h1>상단 오른쪽</h1>
+				<div class="row-align">
+					<section class="partner-area">
+						<h1>로그인</h1>
+						<a href="#" class="login">
+							<i class="fas fa-sign-in-alt"></i>
+							<span>PARTNER LOGIN</span> 
+						</a>
+					</section>
+					<section class="language-area">
+						<h1>언어셋</h1>
+						<button class="language">
+							<i class="fas fa-globe"></i>
+							<span>ENG(EU)</span>
+						</button>
+					</section>
+				</div>
+			
+			</section>
+		</div>
+	</header>
+</body>
+</html>
