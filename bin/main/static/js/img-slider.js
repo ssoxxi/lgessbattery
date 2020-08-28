@@ -7,28 +7,33 @@
 
 var totSlide;
 var speed=1000; // 애니메이션 시간
-var delay=2000; // 슬라이드 유지 시간
+var delay=5000; // 슬라이드 유지 시간
 var images;
 var slide;
 /* set slide*/
 $(function(){
 	totSlide=$(".main-visual .swiper-wrap>.img-slide").length;
 	
-	start();
+	slide=setTimeout(start, delay);
 	
 	$(".main-visual").hover( stop, start);
+	$("#prev").click(prev);
+	$("#next").click(next);
 });
 
 
 function start() {
-	slide=setTimeout(next, delay);
+	
+	next();
+	slide=setTimeout(start, delay);
+	
 }
 function stop() {
 	clearTimeout(slide);
 }
 
 function next(){
-	images=$('.main-visual .swiper-wrap');
+	images=$(".main-visual .swiper-wrap");
 	images.stop().animate({left:-1920}, speed, function(){
 		//제일앞-->제일뒤로
 		var first=$(".main-visual .swiper-wrap .img-slide:first-child");
@@ -37,8 +42,19 @@ function next(){
 		last.after(first);
 		images.css("left",0); 
 	});
+	//slide=setTimeout(next, delay);
+}
+
+function prev(){
+	var first=$(".main-visual .swiper-wrap .img-slide:first-child");
+	var last=$(".main-visual .swiper-wrap .img-slide:last-child");
+	images=$(".main-visual .swiper-wrap");
 	
-	slide=setTimeout(next, delay);
+	first.before(last);
+	images.css("left",-1920); 
+	
+	images.stop().animate({left:0}, speed);
+	
 }
 
 

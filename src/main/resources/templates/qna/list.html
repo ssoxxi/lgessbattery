@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<th:block th:include="/commons/head::commonHead"></th:block>
+	<link rel="stylesheet" type="text/css" href="/css/qna/list.css">
+</head>
+<body>
+	<!-- header -->
+	<th:block th:insert="/commons/header::header"></th:block>
+	<!-- main -->
+	<main>
+		<h1>mybatis로 처리한 게시판</h1>
+		<div>
+			<section>
+				<h1>페이지 제목</h1>
+				<p>mybatis로 처리한 게시글</p>
+			</section>
+			<section id="qna">
+				<h1>게시글 내용</h1>
+				<div class="wrap">
+					<div class="btn">
+						<a href="#">글쓰기</a>				
+					</div>
+					<ul class="tit flex">
+						<li>no</li>
+						<li>제목</li>
+						<li>조회수</li>
+						<li>작성자</li>
+						<li>작성일</li>
+					</ul>
+					<ul class="contents flex" th:each="dto:${qnaList}">
+						<li th:text="${dto.no}"></li>
+						<li><a th:href="|/qna/${dto.no}|">[[${dto.subject}]]</a></li>
+						<li>[[${dto.count}]]</li>
+						<li>[[${dto.writer}]]</li>
+						<li>[[${dto.reg_date}]]</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+	</main>
+	<!-- footer -->
+	<th:block th:insert="/commons/footer::footer"></th:block>
+</body>
+</html>
